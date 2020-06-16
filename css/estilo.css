@@ -1,0 +1,187 @@
+html,
+body {
+  margin: 0;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #2e282a;
+}
+
+@viewport {
+  zoom: 1;
+  min-zoom: 1;
+  max-zoom: 2;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header header"
+    "nav main main main main"
+    "footer footer footer footer footer";
+  position: relative;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-width: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background: #eee;
+  grid-area: header;
+  max-height: 7em;
+  min-height: 7em;
+  padding-left: 45%;
+}
+
+header img {
+  max-height: 150px;
+}
+
+main {
+  background: #ddd;
+  grid-area: main;
+  min-height: 20em;
+  padding: 2em;
+  text-align: justify;
+}
+
+nav {
+  background: #76b041;
+  grid-area: nav;
+  min-height: 20em;
+}
+
+nav > a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: #2e282a;
+}
+
+nav > a:hover {
+  color: #ddd;
+  font-weight: bold;
+}
+
+.activo {
+  color: #ddd;
+  font-weight: bold;
+}
+
+footer {
+  background: #2e282a;
+  grid-area: footer;
+  min-height: 5em;
+  max-height: 5em;
+  color: #76b041;
+  text-align: center;
+  padding: 1em;
+  align-self: end;
+}
+
+.cerrada {
+  display: none;
+  color: #76b041;
+  font-weight: bold;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.mySlides {
+  display: none;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #2e282a;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: #76b041;
+}
+
+.numbertext{
+    color:#2e282a;
+    font-size:35px;
+   }
+   .fade{
+    -webkit-animation-name:fade;
+    -webkit-animation-duration:1.5s;
+    animation-name:fade;
+    animation-duration:1.5s;
+   }
+   
+   @-webkit-keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+   }
+   
+   @keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+   }
+
+
+@media only screen and (max-width: 768px) {
+  .contenedor {
+    display: block;
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vh;
+  }
+
+  header {
+    min-width: 100vh;
+  }
+
+  nav {
+    min-width: 100vh;
+    max-height: 3em;
+    min-height: 3em;
+  }
+
+  nav > a {
+    display: inline-grid;
+    padding: 1em;
+  }
+
+  main {
+    min-width: 100vh;
+    min-height: 30em;
+  }
+
+  footer {
+    min-width: 100vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 320px) {
+  /*Write your css here*/
+}
+
+@media screen and (max-width: 800px) {
+}
