@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -13,11 +13,12 @@
       rel="stylesheet"
     />
     <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/animacion.css">
   </head>
   <body>
     <div class="contenedor">
       <header>
-        <img src="img/telollevo1.png" alt="logo" />
+        <img src="img/telollevo2.png" alt="logo" />
       </header>
       <nav>
         <a href="1index.html">Inicio</a>
@@ -30,28 +31,26 @@
         <a href="8cierre.html">Logout</a>
       </nav>
       <main>
-        <form action="post" class="login">
-          <label for="uname"><b>Usuario</b></label>
-          <input
-            type="text"
-            placeholder="Enter Username"
-            name="uname"
-            required
-          />
-
-          <label for="psw"><b>Contraseña</b></label>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="psw"
-            required
-          />
-
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember" /> Recuérdame
-          </label>
-        </form>
+        <div class="login-box">
+          <h2>Login</h2>
+          <form>
+            <div class="user-box">
+              <input type="text" name="usuario" required="" id="usuario">
+              <label>Usuario</label>
+            </div>
+            <div class="user-box">
+              <input type="password" name="passwd" required="" id="passwd">
+              <label>Password</label>
+            </div>
+            <a  onclick="login()">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Ingresar
+            </a>
+          </form>
+        </div>
       </main>
       <footer>
         <p>
@@ -62,5 +61,7 @@
       </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/animation.js"></script>
   </body>
 </html>
